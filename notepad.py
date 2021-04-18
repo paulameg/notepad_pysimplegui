@@ -13,7 +13,7 @@ file_save = "Salvar      (CTRL+S)"
 sg.Text()
 menu_layout = (
     ["Arquivo", [file_new, file_open, file_save, "Salvar como", "---", "Sair"]],
-    ["Editar", ["Tornar o texto em letra maiúcula", "Tornar o texto em letra maiúcula"]],
+    ["Editar", ["Tornar o texto em letra maiúcula", "Tornar o texto em letra minúscula"]],
 )
 
 layout = [
@@ -75,10 +75,10 @@ def save_file_as() -> str:
     return filename
 
 def letra_maiuscula():
-    window["_BODY_"].update(value = str(values["_BODY_"]).lower())
+    window["_BODY_"].update(value = str(values["_BODY_"]).upper())
 
 def letra_minuscula():
-    window["_BODY_"].update(value = str(values["_BODY_"]).upper())
+    window["_BODY_"].update(value = str(values["_BODY_"]).lower())
 
 
 while True:
